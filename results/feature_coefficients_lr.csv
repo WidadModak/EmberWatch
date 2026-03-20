@@ -1,0 +1,61 @@
+Class,Feature,Coefficient
+Extreme,Temperature (°C),-1.046991063293004
+Extreme,Humidity (%),0.023741892262193094
+Extreme,Rainfall (mm),-0.026901617159485695
+Extreme,Wind Speed (km/h),0.11466177880378235
+Extreme,num_fires,2.732614666653956
+Extreme,avg_size_ha,-1.6497192463139756
+Extreme,Region_Cariboo,-0.32861749046122746
+Extreme,Region_Kamloops,0.656078734817389
+Extreme,Region_Okanagan,-0.3216696009696939
+Extreme,Region_Prince George,-0.5017420821636253
+Extreme,Region_Vancouver Island,0.4800574808287838
+Extreme,Season_Fall,4.093201604887903
+Extreme,Season_Spring,-5.751762296686271
+Extreme,Season_Summer,3.336839819121535
+Extreme,Season_Winter,-1.908471152237683
+High,Temperature (°C),1.4516096615669423
+High,Humidity (%),-1.3450441324122224
+High,Rainfall (mm),0.6426537389843768
+High,Wind Speed (km/h),-0.04463852611984853
+High,num_fires,-7.159135993169795
+High,avg_size_ha,4.393187238399365
+High,Region_Cariboo,0.8634271981469741
+High,Region_Kamloops,-1.918576519325096
+High,Region_Okanagan,0.44420248555551217
+High,Region_Prince George,1.1582043761387815
+High,Region_Vancouver Island,-0.505738861195865
+High,Season_Fall,7.961623659090398
+High,Season_Spring,-13.746845014594191
+High,Season_Summer,-4.381053113053678
+High,Season_Winter,11.453632042761242
+Low,Temperature (°C),-0.6783709931683994
+Low,Humidity (%),0.2996584711443177
+Low,Rainfall (mm),-0.03399293210073649
+Low,Wind Speed (km/h),-0.12328842800275043
+Low,num_fires,2.8914320034587795
+Low,avg_size_ha,-1.4166892328472647
+Low,Region_Cariboo,-0.5518980955807918
+Low,Region_Kamloops,0.6925585355233013
+Low,Region_Okanagan,0.019635833750801048
+Low,Region_Prince George,-0.8852798119754319
+Low,Region_Vancouver Island,0.7086682675882731
+Low,Season_Fall,-2.4899122500403674
+Low,Season_Spring,8.155354763619881
+Low,Season_Summer,-0.36936580909421923
+Low,Season_Winter,-5.948791601739039
+Moderate,Temperature (°C),0.2737523948945909
+Moderate,Humidity (%),1.0216437690056488
+Moderate,Rainfall (mm),-0.581759189723868
+Moderate,Wind Speed (km/h),0.053265175318756595
+Moderate,num_fires,1.535089323057274
+Moderate,avg_size_ha,-1.3267787592380933
+Moderate,Region_Cariboo,0.017088387895109167
+Moderate,Region_Kamloops,0.569939248984435
+Moderate,Region_Okanagan,-0.14216871833650851
+Moderate,Region_Prince George,0.2288175180001499
+Moderate,Region_Vancouver Island,-0.6829868872215296
+Moderate,Season_Fall,-9.56491301393851
+Moderate,Season_Spring,11.34325254765982
+Moderate,Season_Summer,1.4135791030267149
+Moderate,Season_Winter,-3.596369288784223

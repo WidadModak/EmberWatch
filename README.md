@@ -16,9 +16,28 @@ firewatchbc/
 │   ├── confusion_matrix_lr.png
 │   ├── cv_scores_lr.png
 │   ├── feature_coefficients_lr.png
-│   └── f1_per_class_lr.png
+│   └── feature_coefficients_lr.csv
 ├── preprocessing.py
 ├── logistic_regression.py
 ├── predict.py
 └── README.md
 ```
+## Setup
+```bash
+# 1. Create a virtual environment
+python3 -m venv venv
+
+# 2. Activate it
+source venv/bin/activate        # Mac / Linux
+venv\Scripts\activate           # Windows
+
+# 3. Install dependencies
+pip install pip install scikit-learn pandas numpy matplotlib seaborn joblib openpyxl
+
+# 4. Run Script
+python3 logistic_regression.py
+
+# 5. Close Virtual Environment
+deactivate
+```
+---
