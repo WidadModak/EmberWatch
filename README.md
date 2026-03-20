@@ -7,7 +7,6 @@
 
 ## Project Structure
 ```
-firewatchbc/
 ├── data/
 │   └── merged_dataset.csv
 ├── models/
