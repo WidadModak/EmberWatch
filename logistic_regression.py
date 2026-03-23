@@ -17,8 +17,6 @@ from sklearn.metrics import (
     accuracy_score,
 )
 import joblib 
-
-# Import our preprocessing functions from the other file 
 from preprocessing import preprocess_pipline
 
 # ── File Paths ─────────────────────────────────────────────────────────
@@ -31,6 +29,8 @@ print("=" * 50)
 print("STEP 1 - Preprocessing")
 print("=" * 50)
 
+# Prepare the merged wildfire dataset for modeling by returning scaled
+# train/test features, encoded target labels, and feature/class details.
 data = preprocess_pipline(DATA_PATH)
 
 X_train = data["X_train"]
@@ -40,7 +40,7 @@ y_test = data["y_test"]
 le = data["label_encoder"]
 feature_names = data["feature_names"]
 
-# Get class names that appear in data
+# Recover readable wildfire risk labels for reports and plots.
 class_names = list(le.classes_)
 print(f"Classes: {class_names}\n")
 
@@ -49,6 +49,7 @@ print("=" * 50)
 print("STEP 2 - Baseline Model")
 print("=" * 50)
 
+# Establish a reference performance for wildfire risk classification before any tuning.
 baseline_model = LogisticRegression(
     solver = "lbfgs",
     max_iter=1000,
@@ -59,7 +60,10 @@ baseline_model.fit(X_train, y_train)
 y_pred_baseline = baseline_model.predict(X_test)
 baseline_acc = accuracy_score(y_test, y_pred_baseline)
 print(f"Baseline Test Accuracy: {baseline_acc:.4f}\n")
+
+# Show class-wise performance (precision, recall, F1) for each risk level.
 print("Classification Report:")
+# zero_division = 0 avoids undefined metrics when a class is never predicted.
 print(classification_report(y_test, y_pred_baseline, target_names=class_names, zero_division=0))
 
 # ── Step 3: Cross-validation ─────────────────────────────────────────────────────────
@@ -159,7 +163,7 @@ print(f"Saved: {RESULTS_DIR}/feature_coefficients_lr.png\n")
 fig, ax = plt.subplots(figsize=(6, 4))
 ax.bar([f"Fold {i+1}" for i in range(len(cv_scores))], cv_scores, color="#4575b4")
 ax.axhline(cv_scores.mean(), color="#d73027", linestyle="--",
-           label=f"Mean = {cv_scores.mean():.3f}")
+        label=f"Mean = {cv_scores.mean():.3f}")
 ax.set_ylim(0, 1.05)
 ax.set_ylabel("Accuracy")
 ax.set_title("5-Fold Cross-Validation Accuracy")
