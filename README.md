@@ -19,6 +19,7 @@
 ├── preprocessing.py
 ├── logistic_regression.py
 ├── predict.py
+├── random_forest.py
 └── README.md
 ```
 ## Setup
