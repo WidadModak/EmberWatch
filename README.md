@@ -32,7 +32,7 @@ source venv/bin/activate        # Mac / Linux
 venv\Scripts\activate           # Windows
 
 # 3. Install dependencies
-pip install pip install scikit-learn pandas numpy matplotlib seaborn joblib openpyxl
+pip install scikit-learn pandas numpy matplotlib seaborn joblib openpyxl
 
 # 4. Run Script
 python3 logistic_regression.py

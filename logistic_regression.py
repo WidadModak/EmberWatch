@@ -20,7 +20,7 @@ import joblib
 from preprocessing import preprocess_pipline
 
 # ── File Paths ─────────────────────────────────────────────────────────
-DATA_PATH = "data/merged_dataset.csv"
+DATA_PATH = "Data Sets/merged_dataset.csv"
 RESULTS_DIR = "results"
 os.makedirs(RESULTS_DIR, exist_ok=True) # Create results folder
 
@@ -54,6 +54,7 @@ baseline_model = LogisticRegression(
     solver = "lbfgs",
     max_iter=1000,
     random_state=42,
+    class_weight="balanced"
 )
 baseline_model.fit(X_train, y_train)
 
@@ -83,11 +84,11 @@ print("=" * 50)
 
 param_grid = {
     "C":        [0.01, 0.1, 1, 10, 100],   # regularization values to try
-    "max_iter": [1000],
+    "max_iter": [2000],
 }
 
 grid_search = GridSearchCV(
-    LogisticRegression(solver="lbfgs", random_state=42),
+    LogisticRegression(solver="lbfgs", random_state=42, class_weight="balanced"),
     param_grid,
     cv=5,
     scoring="f1_macro",   # f1_macro penalizes the model for ignoring minority classes

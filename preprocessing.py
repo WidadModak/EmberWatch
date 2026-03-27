@@ -15,8 +15,7 @@ NUMERIC_FEATURES = [
     "Humidity (%)",
     "Rainfall (mm)",
     "Wind Speed (km/h)",
-    "num_fires",
-    "avg_size_ha",
+    "SIZE_HA",
 
 ]
 
@@ -24,7 +23,7 @@ NUMERIC_FEATURES = [
 CATEGORICAL_FEATURES = ["Region", "Season"]
 
 # Metric to be Predicted
-TARGET = "dominant_risk"
+TARGET = "RISK_LABEL"
 
 def load_data(filepath):
     """
@@ -47,7 +46,7 @@ def encode_features(df):
     df_encoded = pd.get_dummies(df, columns=CATEGORICAL_FEATURES, drop_first=False)
 
     # Drop year and month features: irrelevant 
-    drop_cols = [TARGET, "Year", "Month"]
+    drop_cols = [TARGET, "Year", "Month", "FIRE_NO", "IGN_DATE", "FIRE_CAUSE"]
     feature_cols = [c for c in df_encoded.columns if c not in drop_cols]
 
     X = df_encoded[feature_cols].astype(float)
