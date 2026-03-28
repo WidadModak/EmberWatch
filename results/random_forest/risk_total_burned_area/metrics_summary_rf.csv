@@ -1,0 +1,2 @@
+target_name,target_column,best_params,cv_f1_macro_mean,cv_f1_macro_std,test_accuracy,test_f1_macro,test_f1_weighted
+risk_total_burned_area,risk_total_burned_area,"{'max_depth': None, 'min_samples_split': 2, 'n_estimators': 100}",0.9361416896121387,0.024404529364819585,0.9243027888446215,0.9244376572783585,0.924642524944743

@@ -1,0 +1,13 @@
+variable,missing_count,missing_percent,data_type
+Region,0,0,character
+Year,0,0,numeric
+Month,0,0,numeric
+Season,0,0,character
+total_burned_area,0,0,numeric
+fire_count,0,0,numeric
+average_fire_size,0,0,numeric
+worst_case_fire_size,0,0,numeric
+temperature_c,0,0,numeric
+humidity_pct,0,0,numeric
+rainfall_mm,0,0,numeric
+wind_speed_kmh,0,0,numeric

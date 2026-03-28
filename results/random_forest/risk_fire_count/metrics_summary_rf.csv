@@ -1,0 +1,2 @@
+target_name,target_column,best_params,cv_f1_macro_mean,cv_f1_macro_std,test_accuracy,test_f1_macro,test_f1_weighted
+risk_fire_count,risk_fire_count,"{'max_depth': 20, 'min_samples_split': 5, 'n_estimators': 100}",0.7749650484529547,0.01292458514422805,0.7250996015936255,0.7228849555462459,0.7243401574078865
